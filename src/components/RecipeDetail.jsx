@@ -132,29 +132,6 @@ const RecipeDetail = ({ recipe, onClose }) => {
 
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        @keyframes slideUp {
-          from { 
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to { 
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.3s ease-out;
-        }
-        .animate-slideUp {
-          animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-      `}</style>
     </div>
   );
 };
