@@ -37,7 +37,7 @@ const HomePage = ({
         setSelectedCategory={setSelectedCategory}
       />
 
-      <main id="recipes" className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <main id="recipes" className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
         {/* Section Header */}
         <div className="mb-12">
           <div className="flex items-center gap-4 mb-4">

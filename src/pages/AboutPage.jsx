@@ -4,7 +4,7 @@ import image from '../assets/2.png';
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-emerald-50">
+    <div className="bg-gradient-to-b from-gray-50 via-white to-emerald-50">
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
@@ -26,20 +26,20 @@ const AboutPage = () => {
           </div>
 
           {/* Story Section */}
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center mb-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start mb-24">
             <div className="space-y-6">
               <div className="space-y-5 text-gray-700 text-lg leading-relaxed">
                 <p className="bg-white p-6 rounded-2xl shadow-sm border-4 border-emerald-500">
                   Hello po, welcome po sa aking <span className="font-bold text-emerald-600">Cook Book</span>! 
                 </p>
                 <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-semibold">
-                <Sparkles size={16} />
-                My story
+                  <Sparkles size={16} />
+                  My story
                 </div>
                 <p className="bg-emerald-100 p-6 rounded-2xl shadow-sm">
                   Nagsimula po ang aking passion sa pagluluto noong bata pa ako, nanonood sa aking 
                   lola habang nagluluto siya ng masasarap na ulam para sa buong pamilya. Mula noon, 
-                  naisipan ko na pong gumawa ng cook book para hindi ko  makalmutan mga specialties n'ya.
+                  naisipan ko na pong gumawa ng cook book para hindi ko makalmutan mga specialties n'ya.
                 </p>
                 <p className="bg-emerald-100 p-6 rounded-2xl shadow-sm">
                   Sa website na ito, ibabahagi ko ang lahat ng aking mga recipe, tips, at secrets 
@@ -47,10 +47,10 @@ const AboutPage = () => {
                   buhay ang mga klasikong Filipino dishes!
                 </p>
               </div>
-              
             </div>
             
-            <div className="relative group">
+            {/* Image - Below text on medium, side by side on large */}
+            <div className="relative group order-first lg:order-last">
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
               <img 
                 src={image}
