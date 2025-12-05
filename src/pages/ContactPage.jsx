@@ -21,7 +21,7 @@ const ContactPage = () => {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-16 animate-slideUp">
-          <span className="text-emerald-600 dark:text-emerald-400 font-bold tracking-wider uppercase text-sm">Get in Touch</span>
+          <span className="text-emerald-600 dark:text-emerald-400 font-bold tracking-wider uppercase text-sm">If you have any recipe request</span>
           <h2 className="text-4xl md:text-5xl font-bold mt-2 mb-6 text-slate-900 dark:text-white">Contact Us Now</h2>
           <div className="w-20 h-1 bg-emerald-500 mx-auto rounded-full"></div>
         </div>

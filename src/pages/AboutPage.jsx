@@ -3,7 +3,7 @@ import image from '../assets/2.png';
 
 const AboutPage = () => {
   return (
-    <div className="bg-gray-50 pt-20 dark:bg-slate-950 transition-colors duration-500 min-h-screen">
+    <div className="bg-gray-50 pt-10 md:pt-20 dark:bg-slate-950 transition-colors duration-500">
       <section className="py-24 relative overflow-hidden">
 
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -34,7 +34,7 @@ const AboutPage = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <div className="space-y-8 animate-slideUp" style={{ animationDelay: '0.2s' }}>
-              <div className="relative bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-slate-800">
+              <div className=" border-green-200 relative bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-xl border dark:border-slate-800">
                 <div className="absolute -top-4 -left-4 w-20 h-20 bg-emerald-500/10 rounded-full blur-xl"></div>
                 <h3 className="text-2xl font-bold mb-4 text-slate-800 dark:text-white flex items-center gap-2">
                    Hello po! 
