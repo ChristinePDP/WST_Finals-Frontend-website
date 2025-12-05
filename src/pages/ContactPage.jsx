@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { MapPin, Phone, Mail, Send, Facebook, Instagram, Youtube, CheckCircle, Sparkles } from 'lucide-react';
 
 const ContactPage = () => {
@@ -17,8 +17,8 @@ const ContactPage = () => {
   };
 
   return (
-    <section className="py-24 bg-gray-50 dark:bg-slate-950 min-h-screen transition-colors duration-500">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-40 bg-gray-50 dark:bg-slate-950 transition-colors duration-500">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-16 animate-slideUp">
           <span className="text-emerald-600 dark:text-emerald-400 font-bold tracking-wider uppercase text-sm">Get in Touch</span>
@@ -27,7 +27,7 @@ const ContactPage = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
-          {/* Info Side */}
+
           <div className="space-y-6 animate-slideUp" style={{ animationDelay: '0.1s' }}>
             <div className="grid gap-6">
               {[
@@ -47,7 +47,6 @@ const ContactPage = () => {
               ))}
             </div>
 
-            {/* Socials - Glass Effect */}
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-600 to-teal-700 p-8 text-white shadow-xl">
                <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
                <h4 className="text-2xl font-bold mb-6 relative z-10">Follow Our Kitchen</h4>
@@ -61,7 +60,6 @@ const ContactPage = () => {
             </div>
           </div>
 
-          {/* Form Side */}
           <div className="bg-white dark:bg-slate-900 rounded-[2rem] shadow-2xl shadow-gray-200/50 dark:shadow-none border border-gray-100 dark:border-slate-800 p-8 lg:p-10 animate-slideUp" style={{ animationDelay: '0.2s' }}>
             {isSubmitted ? (
               <div className="text-center py-20">

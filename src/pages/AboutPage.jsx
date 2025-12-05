@@ -3,7 +3,7 @@ import image from '../assets/2.png';
 
 const AboutPage = () => {
   return (
-    <div className="bg-gray-50 dark:bg-slate-950 transition-colors duration-500 min-h-screen">
+    <div className="bg-gray-50 pt-20 dark:bg-slate-950 transition-colors duration-500 min-h-screen">
       <section className="py-24 relative overflow-hidden">
 
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -11,7 +11,7 @@ const AboutPage = () => {
           <div className="absolute bottom-20 left-0 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
 
           <div className="text-center mb-20 animate-slideUp">
             <div className="inline-block mb-6">

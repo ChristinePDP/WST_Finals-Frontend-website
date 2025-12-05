@@ -1,13 +1,11 @@
-import React from 'react';
 import { Search } from 'lucide-react';
 
 const Hero = ({ searchQuery, setSearchQuery }) => {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
-      {/* Background - Elegant Dark Mode Handling */}
+    <section className="relative pt-40 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-700 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800"></div>
-      
-      {/* Animated Blobs (Dark Mode Optimized) */}
+
       <div className="absolute inset-0 opacity-20 dark:opacity-30">
         <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-emerald-400/30 rounded-full mix-blend-overlay blur-3xl animate-slow-spin"></div>
         <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-cyan-400/30 rounded-full mix-blend-overlay blur-3xl animate-float"></div>
@@ -26,7 +24,6 @@ const Hero = ({ searchQuery, setSearchQuery }) => {
           </p>
         </div>
         
-        {/* Search Bar - Glassmorphism */}
         <div className="max-w-2xl mx-auto animate-slideUp" style={{ animationDelay: '0.2s' }}>
           <div className="relative group">
             <div className="absolute inset-0 bg-emerald-400/30 dark:bg-emerald-500/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
