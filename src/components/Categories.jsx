@@ -11,7 +11,7 @@ const Categories = ({ selectedCategory, setSelectedCategory }) => {
               onClick={() => setSelectedCategory(category.id)}
               className={`relative flex items-center gap-3 px-6 py-3 rounded-2xl font-semibold whitespace-nowrap transition-all duration-300 flex-shrink-0 border ${
                 selectedCategory === category.id
-                  ? 'bg-emerald-600 text-white border-emerald-500 shadow-lg shadow-emerald-500/25 scale-105'
+                  ? 'bg-emerald-600 text-white border-emerald-500 shadow-lg shadow-emerald-500/25 scale-100'
                   : 'bg-gray-50 dark:bg-slate-900 text-gray-600 dark:text-slate-400 border-gray-200 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 hover:text-emerald-600 dark:hover:text-emerald-400'
               }`}
             >
