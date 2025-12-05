@@ -8,13 +8,11 @@ import { recipes, categories } from './data/recipes';
 import RecipeDetail from './components/RecipeDetail';
 
 const App = () => {
-  // State Management
   const [currentPage, setCurrentPage] = useState('home');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
-  // Filter Recipes
   const filteredRecipes = useMemo(() => {
     return recipes.filter(recipe => {
       const matchesCategory = selectedCategory === 'all' || recipe.category === selectedCategory;
@@ -23,7 +21,6 @@ const App = () => {
     });
   }, [selectedCategory, searchQuery]);
 
-  // Render Current Page (Simple Router)
   const renderPage = () => {
     switch(currentPage) {
       case 'home':
@@ -58,15 +55,10 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
-
-      {/* Page Content */}
       {renderPage()}
-
       <Footer setCurrentPage={setCurrentPage} />
-
-      {/* Recipe Detail Modal */}
       {selectedRecipe && (
         <RecipeDetail 
           recipe={selectedRecipe} 

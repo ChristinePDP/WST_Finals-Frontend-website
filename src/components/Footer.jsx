@@ -1,4 +1,3 @@
-import React from 'react';
 import { ChefHat, Facebook, Instagram, Mail, Phone, MapPin, Heart } from 'lucide-react';
 
 const Footer = ({ setCurrentPage }) => {
@@ -9,7 +8,7 @@ const Footer = ({ setCurrentPage }) => {
 
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-200 py-16 overflow-hidden">
-      {/* Decorative Elements */}
+
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 left-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
         <div className="absolute bottom-10 right-10 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
@@ -17,14 +16,14 @@ const Footer = ({ setCurrentPage }) => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16">
-          {/* Brand Section */}
+
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="bg-gradient-to-br from-emerald-500 to-teal-600 p-3 rounded-2xl shadow-lg">
                 <ChefHat size={32} className="text-white" strokeWidth={2.5} />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-white">Tine</h3>
+                <h3 className="text-2xl font-bold text-white">Christine P. De Padua</h3>
                 <p className="text-sm text-emerald-400 font-medium">My Cook Book</p>
               </div>
             </div>
@@ -51,9 +50,8 @@ const Footer = ({ setCurrentPage }) => {
             </div>
           </div>
           
-          {/* Quick Links & Connect - Side by side on mobile */}
           <div className="grid grid-cols-2 lg:col-span-2 gap-8 lg:gap-16">
-            {/* Quick Links */}
+
             <div>
               <h4 className="text-lg font-bold mb-6 text-white flex items-center gap-2">
                 <div className="w-1 h-6 bg-gradient-to-b from-emerald-500 to-teal-600 rounded-full"></div>
@@ -90,7 +88,6 @@ const Footer = ({ setCurrentPage }) => {
               </ul>
             </div>
             
-            {/* Connect */}
             <div>
               <h4 className="text-lg font-bold mb-6 text-white flex items-center gap-2">
                 <div className="w-1 h-6 bg-gradient-to-b from-emerald-500 to-teal-600 rounded-full"></div>
@@ -120,7 +117,6 @@ const Footer = ({ setCurrentPage }) => {
           </div>
         </div>
         
-        {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm flex items-center gap-2">

@@ -1,30 +1,28 @@
-import React from 'react';
+
 import { categories } from '../data/recipes';
 
 const Categories = ({ selectedCategory, setSelectedCategory }) => {
   return (
-    <section className="py-4 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-6 bg-white dark:bg-slate-950 transition-colors duration-500 border-b border-gray-100 dark:border-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex gap-2 sm:gap-3 overflow-x-auto pb-3 scrollbar-hide scroll-smooth -mx-4 px-4 sm:mx-0 sm:px-0">
+        <div className="flex gap-3 overflow-x-auto pb-4 pt-2 scrollbar-hide scroll-smooth">
           {categories.map(category => (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`group relative flex items-center gap-2 sm:gap-2.5 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl font-semibold whitespace-nowrap transition-all duration-300 flex-shrink-0 ${
+              className={`relative flex items-center gap-3 px-6 py-3 rounded-2xl font-semibold whitespace-nowrap transition-all duration-300 flex-shrink-0 border ${
                 selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-md shadow-emerald-500/30'
-                  : 'bg-white text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 hover:scale-105 shadow-sm hover:shadow-md border border-gray-200'
+                  ? 'bg-emerald-600 text-white border-emerald-500 shadow-lg shadow-emerald-500/25 scale-105'
+                  : 'bg-gray-50 dark:bg-slate-900 text-gray-600 dark:text-slate-400 border-gray-200 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 hover:text-emerald-600 dark:hover:text-emerald-400'
               }`}
             >
-              <span className={`text-lg sm:text-xl transition-transform duration-300 ${
-                selectedCategory === category.id ? '' : 'group-hover:scale-110'
-              }`}>
-                {category.icon}
-              </span>
-              <span className="text-xs sm:text-sm font-semibold">{category.name}</span>
+              <span className="text-xl filter drop-shadow-sm">{category.icon}</span>
+              <span className="text-sm tracking-wide">{category.name}</span>
               
               {selectedCategory === category.id && (
-                <div className="absolute inset-0 rounded-xl bg-white/20 animate-pulse"></div>
+                <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
+                  <div className="animate-shine absolute inset-0 w-full h-full"></div>
+                </div>
               )}
             </button>
           ))}

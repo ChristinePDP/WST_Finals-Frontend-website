@@ -1,5 +1,5 @@
-import React from 'react';
-import { ChefHat, Home, Mail, Info} from 'lucide-react';
+import { ChefHat, Home, Mail, Info } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const Header = ({ currentPage, setCurrentPage }) => {
   const handleNavigation = (page) => {
@@ -10,72 +10,65 @@ const Header = ({ currentPage, setCurrentPage }) => {
   };
 
   return (
-    <header className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-40 border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <header className="fixed w-full top-0 z-50 transition-all duration-300 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-b border-gray-100 dark:border-slate-800/50">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
         <div className="flex items-center justify-between">
+          
           <div 
-            className="flex items-center gap-3 cursor-pointer group"
+            className="flex items-center gap-2 sm:gap-3 cursor-pointer group flex-shrink-0"
             onClick={() => handleNavigation('home')}
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-              <div className="relative bg-gradient-to-br from-emerald-500 to-teal-600 p-2.5 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                <ChefHat size={28} className="text-white" strokeWidth={2.5} />
+              <div className="absolute inset-0 bg-emerald-500 rounded-2xl blur-lg opacity-40 group-hover:opacity-75 transition-opacity duration-500 animate-pulse"></div>
+              <div className="relative bg-gradient-to-br from-emerald-500 to-teal-600 p-2 sm:p-2.5 rounded-xl sm:rounded-2xl shadow-lg dark:shadow-emerald-900/20 group-hover:scale-105 transition-transform duration-300">
+
+                <ChefHat className="text-white w-6 h-6 sm:w-7 sm:h-7" strokeWidth={2.5} />
               </div>
             </div>
             <div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+              <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 dark:from-emerald-400 dark:to-teal-300 bg-clip-text text-transparent tracking-tight">
                 Tine
               </h1>
-              <p className="text-sm text-gray-600 font-medium">My very own cook book </p>
+
+              <p className="hidden sm:block text-xs text-gray-500 dark:text-gray-400 font-medium tracking-wide whitespace-nowrap">
+                MGA LUTONG BAHAY
+              </p>
             </div>
           </div>
           
-          <nav className="flex items-center gap-2">
-            <button 
-              onClick={() => handleNavigation('home')}
-              className={`group relative flex items-center gap-2 transition-all duration-300 px-4 py-2.5 rounded-xl font-medium ${
-                currentPage === 'home' 
-                  ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-lg shadow-emerald-500/30' 
-                  : 'text-gray-600 hover:text-emerald-600 hover:bg-emerald-50'
-              }`}
-            >
-              <Home size={20} className={currentPage === 'home' ? '' : 'group-hover:scale-110 transition-transform'} />
-              <span className="hidden md:inline">Home</span>
-              {currentPage === 'home' && (
-                <div className="absolute inset-0 rounded-xl bg-white/20 animate-pulse"></div>
-              )}
-            </button>
-            
-            <button 
-              onClick={() => handleNavigation('about')}
-              className={`group relative flex items-center gap-2 transition-all duration-300 px-4 py-2.5 rounded-xl font-medium ${
-                currentPage === 'about' 
-                  ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-lg shadow-emerald-500/30' 
-                  : 'text-gray-600 hover:text-emerald-600 hover:bg-emerald-50'
-              }`}
-            >
-              <Info size={20} className={currentPage === 'about' ? '' : 'group-hover:scale-110 transition-transform'} />
-              <span className="hidden md:inline">About</span>
-              {currentPage === 'about' && (
-                <div className="absolute inset-0 rounded-xl bg-white/20 animate-pulse"></div>
-              )}
-            </button>
-            
-            <button 
-              onClick={() => handleNavigation('contact')}
-              className={`group relative flex items-center gap-2 transition-all duration-300 px-4 py-2.5 rounded-xl font-medium ${
-                currentPage === 'contact' 
-                  ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-lg shadow-emerald-500/30' 
-                  : 'text-gray-600 hover:text-emerald-600 hover:bg-emerald-50'
-              }`}
-            >
-              <Mail size={20} className={currentPage === 'contact' ? '' : 'group-hover:scale-110 transition-transform'} />
-              <span className="hidden md:inline">Contact</span>
-              {currentPage === 'contact' && (
-                <div className="absolute inset-0 rounded-xl bg-white/20 animate-pulse"></div>
-              )}
-            </button>
+          <nav className="flex items-center gap-1">
+            {[
+              { id: 'home', icon: Home, label: 'Home' },
+              { id: 'about', icon: Info, label: 'About' },
+              { id: 'contact', icon: Mail, label: 'Contact' }
+            ].map((item) => (
+              <button 
+                key={item.id}
+                onClick={() => handleNavigation(item.id)}
+                className={`group relative flex items-center justify-center gap-2 px-2.5 sm:px-4 py-2 sm:py-2.5 rounded-xl font-medium transition-all duration-300 overflow-hidden ${
+                  currentPage === item.id 
+                    ? 'text-white shadow-lg shadow-emerald-500/25' 
+                    : 'text-gray-600 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-800'
+                }`}
+              >
+
+                {currentPage === item.id && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-600"></div>
+                )}
+                
+                <item.icon 
+                  size={20} 
+                  className={`relative z-10 transition-transform duration-300 ${currentPage === item.id ? 'scale-110' : 'group-hover:scale-110'}`} 
+                />
+                <span className={`relative z-10 hidden md:inline ${currentPage === item.id ? 'font-semibold' : ''}`}>
+                  {item.label}
+                </span>
+              </button>
+            ))}
+
+            <div className="ml-1 pl-1 sm:ml-2 sm:pl-2 border-l border-gray-200 dark:border-slate-700">
+              <ThemeToggle />
+            </div>
           </nav>
         </div>
       </div>
