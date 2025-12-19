@@ -4,6 +4,8 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import Footer from './components/Footer';
+// DITO KO LANG DINAGDAG ANG IMPORT
+import CookingChatbot from './components/CookingChatbot';
 import { recipes, categories } from './data/recipes';
 import RecipeDetail from './components/RecipeDetail';
 
@@ -59,6 +61,10 @@ const App = () => {
       <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
       {renderPage()}
       <Footer setCurrentPage={setCurrentPage} />
+      
+      {/* DITO KO INILAGAY YUNG CHATBOT */}
+      <CookingChatbot />
+
       {selectedRecipe && (
         <RecipeDetail 
           recipe={selectedRecipe} 

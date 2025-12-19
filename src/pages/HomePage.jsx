@@ -63,7 +63,7 @@ const HomePage = ({
 
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 z-40 bg-slate-900 dark:bg-emerald-600 text-white w-12 h-12 rounded-full shadow-2xl flex items-center justify-center transition-all duration-500 ${
+        className={`fixed bottom-8 left-8 z-40 bg-slate-900 dark:bg-emerald-600 text-white w-12 h-12 rounded-full shadow-2xl flex items-center justify-center transition-all duration-500 ${
           showBackToTop ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
         } hover:scale-110`}
       >
