@@ -14,7 +14,7 @@ const CookingChatbot = () => {
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
 
-  const API_KEY = "AIzaSyBqgkF8gxapw5k5POCQmCwwScRYXadKjYo";
+  const API_KEY = "AIzaSyCVPEG8qCYwCgnGKcPI7XLbyJKrAFTc4Gw";
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
